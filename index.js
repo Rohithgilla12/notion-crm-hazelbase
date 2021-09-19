@@ -40,7 +40,6 @@ async function main() {
           email: emailText,
           limit: 1,
         });
-        // const searchResponse = [];
         if (searchResponse.length !== 0) {
           fullName = sampleResponse[0].name.full;
           const linkedInObj = sampleResponse[0].profiles.find(
