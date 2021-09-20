@@ -41,11 +41,11 @@ async function main() {
           limit: 1,
         });
         if (searchResponse.length !== 0) {
-          fullName = sampleResponse[0].name.full;
-          const linkedInObj = sampleResponse[0].profiles.find(
+          fullName = searchResponse[0].name.full;
+          const linkedInObj = searchResponse[0].profiles.find(
             (profile) => profile.network === "linkedin"
           );
-          const twitterObj = sampleResponse[0].profiles.find(
+          const twitterObj = searchResponse[0].profiles.find(
             (profile) => profile.network === "twitter"
           );
           if (linkedInObj) {
