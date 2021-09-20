@@ -10,12 +10,9 @@ const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
 kelvinSDK.auth(process.env.KELVIN_DATA_KEY);
 
-const sampleResponse = require("./response.json");
-
 const notion = new Client({ auth: NOTION_SECRET_KEY });
 
 async function main() {
-  console.log("Running the Function");
   try {
     const response = await notion.databases.query({
       database_id: NOTION_DATABASE_ID,
@@ -91,8 +88,8 @@ async function main() {
             rich_text: [
               {
                 type: "text",
-                text: { content: "Nothing", link: null },
-                plain_text: "Nothing",
+                text: { content: miscData, link: null },
+                plain_text: miscData,
                 href: null,
               },
             ],
