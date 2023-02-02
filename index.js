@@ -44,7 +44,7 @@ const getSearchResults = async (email) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `ApiKey ${process.env.KELVIN_DATA_KEY}`
+                "Authorization": `ApiKey ${process.env.HAZEL_BASE_KEY}`
             },
             body: JSON.stringify({
                 query: searchQuery(),
